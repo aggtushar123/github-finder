@@ -8,6 +8,7 @@ const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 export const GithubProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  
 
   const fetchUsers = async () => {
     const response = await fetch(`${GITHUB_URL}/users`, {
